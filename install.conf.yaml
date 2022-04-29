@@ -9,7 +9,9 @@
 
 - link: 
     ~/.zshrc:
+    ~/powerlevel10k:
     ~/.p10k.zsh:
+    ~/.tmux.conf:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
