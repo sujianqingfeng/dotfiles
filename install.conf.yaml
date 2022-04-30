@@ -10,7 +10,7 @@
 - link: 
     ~/.zsh:
     ~/.zshrc:
-    ~/powerlevel10k:
+    ~/.oh-my-zsh:
     ~/.p10k.zsh:
     ~/.tmux.conf:
 
