@@ -8,6 +8,7 @@
 
 
 - link: 
+    ~/.zsh:
     ~/.zshrc:
     ~/powerlevel10k:
     ~/.p10k.zsh:
