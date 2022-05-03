@@ -95,6 +95,13 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  l = {
+    name = "LSP",
+    f = {
+      "<cmd>lua vim.lsp.buf.formatting_sync(nil, 2000)<CR>","Format"
+    }
+  }
 }
 
 which.register(mappings,opts)

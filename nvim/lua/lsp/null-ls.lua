@@ -18,7 +18,7 @@ null_ls.setup({
     formatting.stylua,
     -- frontend
     formatting.prettier.with({ -- 只比默认配置少了 markdown
-      filetypes = {
+       filetypes = {
         "javascript",
         "javascriptreact",
         "typescript",
@@ -49,7 +49,7 @@ null_ls.setup({
   diagnostics_format = "[#{s}] #{m}",
   -- 保存自动格式化
   on_attach = function(_)
-    vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()']])
+    vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting_sync(nil,2000)']])
     -- if client.resolved_capabilities.document_formatting then
     --   vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     -- end
