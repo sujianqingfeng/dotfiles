@@ -99,7 +99,9 @@ local mappings = {
   l = {
     name = "LSP",
     f = {
-      "<cmd>lua vim.lsp.buf.formatting_sync(nil, 2000)<CR>","Format"
+
+
+      "<cmd>lua vim.lsp.buf.formatting_sync()<CR>","Format"
     }
   }
 }
