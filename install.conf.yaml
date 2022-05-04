@@ -12,7 +12,6 @@
     ~/.zsh:
     ~/.zshrc:
     ~/.oh-my-zsh:
-    ~/.p10k.zsh:
     ~/.tmux.conf:
     ~/.config/nvim: nvim
 
