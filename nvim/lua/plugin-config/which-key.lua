@@ -84,7 +84,7 @@ local opts = {
 
 local mappings = {
   ["e"] = { ":NvimTreeToggle<CR>", "Explorer" },
-  ["w"] = { ":w<CR>", "Save" },
+  ["w"] = { ":wa<CR>", "Save" },
 
 
   -- map("n", "<leader>tf", "<cmd>lua _float_toggle()<CR>", opts)
