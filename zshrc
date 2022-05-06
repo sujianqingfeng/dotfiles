@@ -1,6 +1,7 @@
 source "$HOME/.zsh/exec.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/nvm.zsh"
+source "$HOME/.zsh/proxy.zsh"
 
 
 # If you come from bash you might have to change your $PATH.
