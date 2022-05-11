@@ -1,4 +1,3 @@
-
 vim.g.nvim_tree_icons = {
   default = "",
   symlink = "",
@@ -20,20 +19,17 @@ vim.g.nvim_tree_icons = {
   },
 }
 
-
 local status, nvim_tree = pcall(require, "nvim-tree")
 if not status then
-    vim.notify("没有找到 nvim-tree")
+  vim.notify("没有找到 nvim-tree")
   return
 end
 
-
-
 nvim_tree.setup({
+  disable_netrw = true,
   git = {
     enable = true,
     ignore = true,
-
   },
   -- project plugin 需要这样设置
   update_cwd = true,
@@ -64,7 +60,7 @@ nvim_tree.setup({
       custom_only = false,
       list = {
         -- 打开文件或文件夹
-        { key = {"<CR>", "o", "<2-LeftMouse>"}, action = "edit" },
+        { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
         -- 分屏打开文件
         { key = "v", action = "vsplit" },
         { key = "h", action = "split" },
@@ -87,7 +83,7 @@ nvim_tree.setup({
     open_file = {
       resize_window = true,
       quit_on_open = false,
-    }
+    },
   },
   -- npm install -g wsl-open
   -- https://github.com/4U6U57/wsl-open/
@@ -96,7 +92,6 @@ nvim_tree.setup({
   },
 })
 
-
-require('nvim-tree.events').on_file_created(function (file)
-  vim.cmd('edit '..file.fname)
+require("nvim-tree.events").on_file_created(function(file)
+  vim.cmd("edit " .. file.fname)
 end)
