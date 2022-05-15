@@ -1,7 +1,5 @@
 # Dotfiles
 
 ```
-sudo apt install stow
-
-
+sh install
 ```
