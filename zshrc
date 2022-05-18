@@ -82,8 +82,8 @@ plugins=(
   zsh-syntax-highlighting
   z
   vi-mode
+  nvm
 )
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
