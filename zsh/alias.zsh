@@ -30,3 +30,13 @@ funciton i(){
   cd ~/work-space/$1
 }
 
+
+# conda alias
+alias c='code .'
+
+# common alias
+
+alias rm='rm -rf'
+alias cp='cp -r'
+alias mv='mv -i'
+
