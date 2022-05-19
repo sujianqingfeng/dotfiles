@@ -77,13 +77,13 @@ ZSH_THEME="spaceship-prompt/spaceship"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git 
   zsh-autosuggestions
   zsh-syntax-highlighting
   z
   vi-mode
   nvm
 )
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
