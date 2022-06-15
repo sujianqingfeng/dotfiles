@@ -17,6 +17,19 @@ null_ls.setup({
     -- StyLua
     formatting.stylua,
     -- frontend
+    formatting.eslint.with({
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "vue",
+      },
+      prefer_local = "node_modules/.bin",
+      condition = function(utils)
+          return utils.root_has_file({ ".eslintrc", ".eslintrc.json",".eslintrc.js","eslintrc.config.js" })
+      end,
+    }),
     formatting.prettier.with({ -- 只比默认配置少了 markdown
       filetypes = {
         "javascript",
@@ -34,6 +47,9 @@ null_ls.setup({
       },
       extra_filetypes = { "njk" },
       prefer_local = "node_modules/.bin",
+      condition = function(utils)
+          return utils.root_has_file({ ".prettierrc", ".perttierrc.json",".perttierrc.js","perttierrc.config.js" })
+      end,
     }),
 
     -- Diagnostics  ---------------------
@@ -48,11 +64,11 @@ null_ls.setup({
   },
   diagnostics_format = "[#{s}] #{m}",
   -- 保存自动格式化
-  on_attach = function(client)
+  on_attach = function(_)
     -- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting_sync()']])
-    if client.resolved_capabilities.document_formatting then
-      vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
-      -- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting_sync()']])
-    end
+    -- if client.resolved_capabilities.document_formatting then
+    -- vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+    -- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting_sync()']])
+    -- end
   end,
 })
