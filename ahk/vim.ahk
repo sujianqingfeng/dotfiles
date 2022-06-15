@@ -19,9 +19,31 @@ CapsLock & l::Send {Right}
 CapsLock & j::Send {Down}
 CapsLock & k::Send {Up}
 
+; 打开vscode
+CapsLock & o::
+IfWinExist ahk_exe code.exe
+	winactivate ahk_exe code.exe
+else
+	run, "E:\Users\hens\AppData\Local\Programs\Microsoft VS Code\bin\code.cmd"
+WinWait ahk_exe code.exe
+WinActivate ahk_exe code.exe
+WinWaitActive ahk_exe code.exe
+return
+
+; 浏览器
+CapsLock & p::
+IfWinExist ahk_exe msedge.exe
+	winactivate ahk_exe msedge.exe
+else
+	run, "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+WinWait ahk_exe msedge.exe
+WinActivate ahk_exe msedge.exe
+WinWaitActive ahk_exe msedge.exe
+return
+
 ;双击 切换大小写
 CapsLock::
-if (A_PriorHotkey != "CapsLock" or A_TimeSincePriorHotkey > 400)
+if (A_PriorHotkey != "CapsLock" or A_TimeSincePriorHotkey > 200)
 {
     KeyWait, CapsLock
     return
