@@ -22,6 +22,7 @@ alias ds='nr serve'
 alias db='nr build'
 alias ns='nr start'
 alias t='nr test'
+alias p='nr preview'
 
 
 # dir
