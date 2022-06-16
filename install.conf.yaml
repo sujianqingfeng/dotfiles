@@ -13,6 +13,7 @@
     ~/.zshrc:
     ~/.oh-my-zsh:
     ~/.tmux.conf:
+    ~/.tmux.conf.local:
     ~/.config/nvim: nvim
 
 

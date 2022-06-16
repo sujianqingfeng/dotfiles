@@ -1,0 +1,54 @@
+set -g prefix C-a
+unbind C-b
+bind C-a send-prefix
+
+set -g base-index         1     # 窗口编号从 1 开始计数
+set -g display-panes-time 10000 # PREFIX-Q 显示编号的驻留时长，单位 ms
+set -g mouse              on    # 开启鼠标
+set -g pane-base-index    1     # 窗格编号从 1 开始计数
+set -g renumber-windows   on    # 关掉某个窗口后，编号重排
+
+set -g allow-rename      off   # 禁止活动进程修改窗口名
+set -g automatic-rename  off   # 禁止自动命名新窗口
+# setw -g mode-keys         vi   
+
+set -g mode-keys vi
+set -g status-keys vi
+
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# 分屏
+# unbind '"'
+bind - split-window -v -c "#{pane_current_path}"
+# unbind %
+bind \\ split-window -h -c "#{pane_current_path}"
+
+
+# 复制模式
+bind -T copy-mode-vi v send -X begin-selection
+bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "pbcopy"
+
+
+# 最大
+bind z resize-pane -Z
+
+
+
+# style
+set-option -g status-style bg=default
+
+set -g status-left-length 85
+set -g status-left "working on#[fg=colour135] #S"
+set -g window-status-current-format "#[fg=black,bold bg=default]│#[fg=white bg=cyan]#W#[fg=black,bold bg=default]│"
+set -g window-status-current-format "#[fg=black,bold bg=default]│#[fg=colour135 bg=black]#W#[fg=black,bold bg=default]│"
+set -g status-style bg=default
+set -g status-right "#[fg=magenta] #[bg=gray] %b %d %Y %l:%M %p"
+set -g status-right '#(gitmux "#{pane_current_path}")'
+set -g status-justify centre
+
+# reload
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
