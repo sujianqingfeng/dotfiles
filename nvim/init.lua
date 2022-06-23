@@ -11,19 +11,22 @@ require("plugin-config.project")
 require("plugin-config.nvim-treesitter")
 require('plugin-config.toggle-term')
 require('plugin-config.autopairs')
-require('plugin-config.comment')
-require("plugin-config.indent-blankline")
-require("plugin-config.gitsigns")
 require("plugin-config.which-key")
 require("plugin-config.surround")
 require("plugin-config.auto-session")
 
+-- require("plugin-config.indent-blankline")
+-- require('plugin-config.comment')
+-- require("plugin-config.gitsigns")
+
 -- 内置LSP
-require("lsp.setup")
-require("lsp.cmp")
-require("lsp.ui")
+-- require("lsp.setup")
+-- require("lsp.cmp")
+-- require("lsp.ui")
 
 
 -- 格式化
-require("lsp.null-ls")
+-- require("lsp.null-ls")
+
+require("coc.config")
 

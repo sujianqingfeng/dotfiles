@@ -54,32 +54,32 @@ packer.startup({
     -- lspconfig
     use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
     -- 补全引擎
-    use("hrsh7th/nvim-cmp")
+    -- use("hrsh7th/nvim-cmp")
     -- snippet 引擎
-    use("hrsh7th/vim-vsnip")
-    use("rafamadriz/friendly-snippets")
+    -- use("hrsh7th/vim-vsnip")
+    -- use("rafamadriz/friendly-snippets")
     -- 补全源
-    use("hrsh7th/cmp-vsnip")
-    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
-    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
-    use("hrsh7th/cmp-path") -- { name = 'path' }
-    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+    -- use("hrsh7th/cmp-vsnip")
+    -- use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+    -- use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    -- use("hrsh7th/cmp-path") -- { name = 'path' }
+    -- use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 
     -- ui (新增)
-    use("onsails/lspkind-nvim")
+    -- use("onsails/lspkind-nvim")
     -- indent-blankline
-    use("lukas-reineke/indent-blankline.nvim")
+    -- use("lukas-reineke/indent-blankline.nvim")
 
-    use("tami5/lspsaga.nvim" ) -- 新增
+    -- use("tami5/lspsaga.nvim" ) -- 新增
 
     -- 代码格式化
-    use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
+    -- use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 
     -- JSON 增强
-    use("b0o/schemastore.nvim")
+    -- use("b0o/schemastore.nvim")
 
     --ts
-    use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
+    -- use({ "jose-elias-alvarez/nvim-lsp-ts-utils", requires = "nvim-lua/plenary.nvim" })
 
     -- 终端
     use "akinsho/toggleterm.nvim"
@@ -92,19 +92,21 @@ packer.startup({
     -- use { "Pocco81/AutoSave.nvim" }
 
     -- 注释
-    use "numToStr/Comment.nvim"
-    use "JoosepAlviste/nvim-ts-context-commentstring"
+    -- use "numToStr/Comment.nvim"
+    -- use "JoosepAlviste/nvim-ts-context-commentstring"
 
     -- git
-    use 'lewis6991/gitsigns.nvim'
+    -- use 'lewis6991/gitsigns.nvim'
 
     use "folke/which-key.nvim"
 
     use "ur4ltz/surround.nvim"
 
 
-    -- session 
+    -- session
     use 'rmagatti/auto-session'
+
+    use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
 
 
   end,
