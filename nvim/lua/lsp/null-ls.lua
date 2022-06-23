@@ -8,6 +8,15 @@ local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
 
+
+local with_root_file = function(builtin, file)
+  return builtin.with {
+    condition = function(utils)
+      return utils.root_has_file(file)
+    end,
+  }
+end
+
 null_ls.setup({
   debug = false,
   sources = {
@@ -15,21 +24,21 @@ null_ls.setup({
     --  brew install shfmt
     formatting.shfmt,
     -- StyLua
-    formatting.stylua,
+    with_root_file(formatting.stylua,'stylua.toml'),
     -- frontend
-    formatting.eslint.with({
-      filetypes = {
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "vue",
-      },
-      prefer_local = "node_modules/.bin",
-      condition = function(utils)
-          return utils.root_has_file({ ".eslintrc", ".eslintrc.json",".eslintrc.js","eslintrc.config.js" })
-      end,
-    }),
+    -- formatting.eslint.with({
+    --   filetypes = {
+    --     "javascript",
+    --     "javascriptreact",
+    --     "typescript",
+    --     "typescriptreact",
+    --     "vue",
+    --   },
+    --   prefer_local = "node_modules/.bin",
+    --   condition = function(utils)
+    --       return utils.root_has_file({ ".eslintrc", ".eslintrc.json",".eslintrc.js","eslintrc.config.js" })
+    --   end,
+    -- }),
     formatting.prettier.with({ -- 只比默认配置少了 markdown
       filetypes = {
         "javascript",
@@ -51,6 +60,7 @@ null_ls.setup({
           return utils.root_has_file({ ".prettierrc", ".perttierrc.json",".perttierrc.js","perttierrc.config.js" })
       end,
     }),
+
 
     -- Diagnostics  ---------------------
     diagnostics.eslint.with({

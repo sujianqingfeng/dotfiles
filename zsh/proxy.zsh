@@ -1,5 +1,5 @@
-
-hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+# hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+hostip="desktop-gat3icv.mshome.net"
 wslip=$(hostname -I | awk '{print $1}')
 port=7890
 
