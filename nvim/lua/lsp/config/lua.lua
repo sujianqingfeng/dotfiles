@@ -1,4 +1,5 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua
+local keybindings = require("lsp.keybindings")
 local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
@@ -39,7 +40,7 @@ local opts = {
             vim.api.nvim_buf_set_keymap(bufnr, ...)
         end
         -- 绑定快捷键
-        require('keybindings').mapLSP(buf_set_keymap)
+        keybindings.mapLSP(buf_set_keymap)
     end,
 }
 

@@ -1,4 +1,4 @@
-local keybindings = require("keybindings")
+local keybindings = require("lsp.keybindings")
 local ts_utils = require("nvim-lsp-ts-utils")
 local opts = {
   flags = {

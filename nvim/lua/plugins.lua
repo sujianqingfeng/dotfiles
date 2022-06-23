@@ -50,9 +50,9 @@ packer.startup({
     -- project
     use("ahmedkhalf/project.nvim")
     -- treesitter
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    -- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     -- lspconfig
-    use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
+    -- use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
     -- 补全引擎
     -- use("hrsh7th/nvim-cmp")
     -- snippet 引擎
@@ -86,7 +86,7 @@ packer.startup({
 
 
     -- 自动括号
-    use "windwp/nvim-autopairs"
+    -- use "windwp/nvim-autopairs"
 
     -- 自动保存
     -- use { "Pocco81/AutoSave.nvim" }
@@ -106,6 +106,9 @@ packer.startup({
     -- session
     use 'rmagatti/auto-session'
 
+
+
+    -- coc
     use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
 
 

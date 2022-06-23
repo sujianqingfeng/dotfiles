@@ -1,3 +1,4 @@
+local keybindings = require("lsp.keybindings")
 return {
   on_setup = function(server)
     server.setup({
@@ -14,7 +15,7 @@ return {
         end
 
         -- 绑定快捷键
-        require("keybindings").mapLSP(buf_set_keymap)
+        keybindings.mapLSP(buf_set_keymap)
       end,
     })
   end,
