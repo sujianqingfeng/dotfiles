@@ -50,7 +50,7 @@ packer.startup({
     -- project
     use("ahmedkhalf/project.nvim")
     -- treesitter
-    -- use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     -- lspconfig
     -- use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
     -- 补全引擎
@@ -92,8 +92,8 @@ packer.startup({
     -- use { "Pocco81/AutoSave.nvim" }
 
     -- 注释
-    -- use "numToStr/Comment.nvim"
-    -- use "JoosepAlviste/nvim-ts-context-commentstring"
+    use "numToStr/Comment.nvim"
+    use "JoosepAlviste/nvim-ts-context-commentstring"
 
     -- git
     -- use 'lewis6991/gitsigns.nvim'

@@ -53,7 +53,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -73,7 +73,7 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+" nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
@@ -93,7 +93,7 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
+" nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
@@ -164,6 +164,17 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 local map = vim.api.nvim_set_keymap
 -- 复用 opt 参数
 local opt = { noremap = true, silent = true }
+
+map('n','<leader>rn','<Plug>(coc-rename)',opt)
+
+map('n','<leader>.','<Plug>(coc-codeaction)',opt)
+
+map('n','<leader>l',':CocCommand eslint.exexuteAutofix<CR>',opt)
+
+map('n','gd','<Plug>(coc-definition)',opt)
+
+map('n','<leader>f',':CocCommand prettier.formatFile<CR>',opt)
+-- map('n','','',opt)
 
 
 vim.g.coc_global_extenseons= {

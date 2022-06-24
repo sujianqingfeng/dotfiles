@@ -13,10 +13,11 @@ require("plugin-config.which-key")
 require("plugin-config.surround")
 require("plugin-config.auto-session")
 
+require("plugin-config.nvim-treesitter")
+require('plugin-config.comment')
+
 -- require('plugin-config.autopairs')
--- require("plugin-config.nvim-treesitter")
 -- require("plugin-config.indent-blankline")
--- require('plugin-config.comment')
 -- require("plugin-config.gitsigns")
 
 -- 内置LSP

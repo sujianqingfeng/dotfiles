@@ -95,7 +95,7 @@ map("n", "<C-b>", ":NvimTreeToggle<CR>", opt)
 map("n", "<leader>fc", ":NvimTreeFindFile<CR>", opt)
 
 -- ctrl + /
--- map("n", "<C-_>", "gcc", { noremap = false })
--- map("v", "<C-_>", "gcc", { noremap = false })
+map("n", "<C-_>", "gcc", { noremap = false })
+map("v", "<C-_>", "gcc", { noremap = false })
 
 
