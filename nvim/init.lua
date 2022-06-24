@@ -30,4 +30,5 @@ require('plugin-config.comment')
 -- require("lsp.null-ls")
 
 require("coc.config")
+require("coc.cmp")
 

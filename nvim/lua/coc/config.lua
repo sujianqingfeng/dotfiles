@@ -59,7 +59,7 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<CR>
+" nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
@@ -123,8 +123,8 @@ endif
 
 " Use CTRL-S for selections ranges.
 " Requires 'textDocument/selectionRange' support of language server.
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
+" nmap <silent> <C-s> <Plug>(coc-range-select)
+" xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocActionAsync('format')
@@ -167,11 +167,13 @@ local opt = { noremap = true, silent = true }
 
 map('n','<leader>rn','<Plug>(coc-rename)',opt)
 
-map('n','<leader>.','<Plug>(coc-codeaction)',opt)
+-- map('n','<leader>.','<Plug>(coc-codeaction)',opt)
 
 map('n','<leader>l',':CocCommand eslint.exexuteAutofix<CR>',opt)
 
 map('n','gd','<Plug>(coc-definition)',opt)
+
+map('n','gh',':call ShowDocumentation()<CR>',opt)
 
 map('n','<leader>f',':CocCommand prettier.formatFile<CR>',opt)
 -- map('n','','',opt)
@@ -183,11 +185,11 @@ vim.g.coc_global_extenseons= {
   'coc-tsserver',
   'coc-eslint',
   'coc-prettier',
-  'coc-lua',
   'coc-css',
   'coc-snippets',
   'coc-sumneko-lua',
   'coc-yank',
-  'coc-pairs'
+  'coc-pairs',
+  'coc-vetur'
 }
 

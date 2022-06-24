@@ -84,7 +84,7 @@ local opts = {
 
 local mappings = {
   ["e"] = { ":NvimTreeToggle<CR>", "Explorer" },
-  ["w"] = { ":wa<CR>", "Save" },
+  ["."] = { "<Plug>(coc-codeaction)", "CodeAction" },
 
 
   -- map("n", "<leader>tf", "<cmd>lua _float_toggle()<CR>", opts)
@@ -96,14 +96,6 @@ local mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
 
-  l = {
-    name = "LSP",
-    f = {
-
-
-      "<cmd>lua vim.lsp.buf.formatting_sync()<CR>","Format"
-    }
-  }
 }
 
 which.register(mappings,opts)

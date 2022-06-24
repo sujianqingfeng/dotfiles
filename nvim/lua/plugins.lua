@@ -52,18 +52,18 @@ packer.startup({
     -- treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     -- lspconfig
-    -- use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
+    use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
     -- 补全引擎
-    -- use("hrsh7th/nvim-cmp")
+    use("hrsh7th/nvim-cmp")
     -- snippet 引擎
-    -- use("hrsh7th/vim-vsnip")
+    use("hrsh7th/vim-vsnip")
     -- use("rafamadriz/friendly-snippets")
     -- 补全源
     -- use("hrsh7th/cmp-vsnip")
     -- use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
-    -- use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
-    -- use("hrsh7th/cmp-path") -- { name = 'path' }
-    -- use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    use("hrsh7th/cmp-path") -- { name = 'path' }
+    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
 
     -- ui (新增)
     -- use("onsails/lspkind-nvim")
@@ -102,11 +102,8 @@ packer.startup({
 
     use "ur4ltz/surround.nvim"
 
-
     -- session
     use 'rmagatti/auto-session'
-
-
 
     -- coc
     use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}

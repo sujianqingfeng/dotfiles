@@ -34,7 +34,7 @@ map("n", "s=", "<C-w>=", opt)
 -- Terminal相关
 -- map("n", "<leader>t", ":sp | terminal<CR>", opt)
 -- map("n", "<leader>vt", ":vsp | terminal<CR>", opt)
-map("t", "<Esc>", "<C-\\><C-n>", opt)
+-- map("t", "<Esc>", "<C-\\><C-n>", opt)
 -- map("t", "<C-h>", [[ <C-\><C-N><C-w>h ]], opt)
 -- map("t", "<C-j>", [[ <C-\><C-N><C-w>j ]], opt)
 -- map("t", "<C-k>", [[ <C-\><C-N><C-w>k ]], opt)
@@ -83,7 +83,6 @@ map("n", "<leader>bc", ":BufferLinePickClose<CR>", opt)
 
 
 
-
 -- Telescope
 -- 查找文件
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
@@ -99,3 +98,4 @@ map("n", "<C-_>", "gcc", { noremap = false })
 map("v", "<C-_>", "gcc", { noremap = false })
 
 
+map("n","<C-s>",":wa<CR>",opt)

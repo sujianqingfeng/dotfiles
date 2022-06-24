@@ -6,12 +6,11 @@ if not status then
 end
 
 
-
 toggleterm.setup{
   -- size can be a number or function which is passed the current terminal
   size = 12,
   hide_numbers = true, -- hide the number column in toggleterm buffers
-  
+
   shade_terminals = true,
   -- shading_factor = '<number>', -- the degree by which to darken to terminal colour, default: 1 for dark backgrounds, 3 for light
   start_in_insert = true,
@@ -21,15 +20,11 @@ toggleterm.setup{
   -- direction = 'float',
   -- close_on_exit = true, -- close the terminal window when the process exits
   -- shell = 'pwsh.exe', -- change the default shell
-  
 }
 
 
 -- 新建终端
 local Terminal = require("toggleterm.terminal").Terminal
-
-
-
 
 -- 新建浮动终端
 local floatTerm =Terminal:new(
@@ -42,7 +37,17 @@ local floatTerm =Terminal:new(
     }
 )
 
-local lazygit = Terminal:new({ cmd = "lazygit", hidden = true, direction = "float",})
+local lazygit = Terminal:new({ 
+  cmd = "lazygit",
+  hidden = true,
+  direction = "float",
+  on_open = function(term)
+    vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", {noremap = true, silent = true})
+  end,
+})
+
+local dev = Terminal:new({ cmd = "nr dev", hidden = true, direction = "float",})
+
 
 
 -- 定义新的方法
@@ -55,11 +60,16 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
+function _dev_toggle()
+  dev:toggle()
+end
+
 
 local opts = {noremap = true,silent = true}
 local map = vim.api.nvim_set_keymap
 map("n", "<leader>tf", "<cmd>lua _float_toggle()<CR>", opts)
 map("n", "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", opts)
+map("n", "<leader>td", "<cmd>lua _dev_toggle()<CR>", opts)
 map("n", "<leader>t", "<cmd>exe v:count.'ToggleTerm'<CR>", opts)
 map("n", "<leader>ta", "<cmd>ToggleTermToggleAll<CR>", opts)
 map("n", "<C-`>", "<cmd>ToggleTermToggleAll<CR>", opts)

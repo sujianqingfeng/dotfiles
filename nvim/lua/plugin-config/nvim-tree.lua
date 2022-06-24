@@ -1,24 +1,3 @@
-vim.g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "",
-    staged = "S",
-    unmerged = "",
-    renamed = "➜",
-    deleted = "",
-    untracked = "U",
-    ignored = "◌",
-  },
-  folder = {
-    default = "",
-    open = "",
-    empty = "",
-    empty_open = "",
-    symlink = "",
-  },
-}
-
 local status, nvim_tree = pcall(require, "nvim-tree")
 if not status then
   vim.notify("没有找到 nvim-tree")
@@ -73,7 +52,7 @@ nvim_tree.setup({
         { key = "d", action = "remove" },
         { key = "r", action = "rename" },
         { key = "x", action = "cut" },
-        { key = "c", action = "copy" },
+        { key = "y", action = "copy" },
         { key = "p", action = "paste" },
         { key = "s", action = "system_open" },
       },
