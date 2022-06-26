@@ -67,10 +67,11 @@ end
 
 local opts = {noremap = true,silent = true}
 local map = vim.api.nvim_set_keymap
+
 map("n", "<leader>tf", "<cmd>lua _float_toggle()<CR>", opts)
 map("n", "<leader>tg", "<cmd>lua _lazygit_toggle()<CR>", opts)
 map("n", "<leader>td", "<cmd>lua _dev_toggle()<CR>", opts)
-map("n", "<leader>t", "<cmd>exe v:count.'ToggleTerm'<CR>", opts)
+map("n", "<C-t>", "<cmd>exe v:count.'ToggleTerm'<CR>", opts)
 map("n", "<leader>ta", "<cmd>ToggleTermToggleAll<CR>", opts)
 map("n", "<C-`>", "<cmd>ToggleTermToggleAll<CR>", opts)
 
