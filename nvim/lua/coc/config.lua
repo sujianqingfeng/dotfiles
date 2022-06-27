@@ -185,7 +185,7 @@ vim.g.coc_global_extenseons= {
   'coc-tsserver',
   'coc-eslint',
   'coc-prettier',
-  'coc-css',
+  'coc-spell-checkercoc-css',
   'coc-snippets',
   'coc-sumneko-lua',
   'coc-yank',
