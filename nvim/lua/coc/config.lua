@@ -190,6 +190,7 @@ vim.g.coc_global_extenseons= {
   'coc-sumneko-lua',
   'coc-yank',
   'coc-pairs',
-  'coc-vetur'
+  'coc-vetur',
+  'coc-spell-checker'
 }
 

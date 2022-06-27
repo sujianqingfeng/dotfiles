@@ -1,4 +1,4 @@
 {
   "Lua.telemetry.enable": true,
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown","vue","js","ts"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown","vue","js","ts","javascript"]
 }
