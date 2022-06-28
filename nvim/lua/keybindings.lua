@@ -97,5 +97,7 @@ map("n", "<leader>fc", ":NvimTreeFindFile<CR>", opt)
 map("n", "<C-_>", "gcc", { noremap = false })
 map("v", "<C-_>", "gcc", { noremap = false })
 
-
+-- 保存
 map("n","<C-s>",":wa<CR>",opt)
+-- 回退
+map("n","<C-z>","u",opt)
