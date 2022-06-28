@@ -33,9 +33,8 @@ end
 packer.startup({
   function(use)
     use 'wbthomason/packer.nvim'
-    -- tokyonight
-    -- use("folke/tokyonight.nvim")
-    use 'marko-cerovac/material.nvim'
+    -- theme
+    use "EdenEast/nightfox.nvim"
     -- nvim-tree
     use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
     -- bufferline
