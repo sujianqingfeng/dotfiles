@@ -14,7 +14,8 @@ require("plugin-config.auto-session")
 require("plugin-config.nvim-treesitter")
 require('plugin-config.comment')
 
-require("plugin-config.tabby")
+-- require("plugin-config.tabby")
+require('plugin-config.barbar')
 require('plugin-config.lualine')
 
 -- require("plugin-config.gitsigns")

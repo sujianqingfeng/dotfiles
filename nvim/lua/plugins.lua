@@ -44,7 +44,10 @@ packer.startup({
     -- use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
 
     -- tabby
-    use "nanozuki/tabby.nvim"
+    -- use "nanozuki/tabby.nvim"
+
+    -- barbar
+    use 'romgrk/barbar.nvim'
 
     -- lualine
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
