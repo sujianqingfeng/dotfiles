@@ -3,8 +3,6 @@ require('keybindings')
 require('plugins')
 require('colorscheme')
 require('plugin-config.nvim-tree')
-require("plugin-config.bufferline")
-require('plugin-config.lualine')
 require("plugin-config.telescope")
 require("plugin-config.dashboard")
 require("plugin-config.project")
@@ -16,9 +14,14 @@ require("plugin-config.auto-session")
 require("plugin-config.nvim-treesitter")
 require('plugin-config.comment')
 
+require("plugin-config.tabby")
+require('plugin-config.lualine')
+
+-- require("plugin-config.gitsigns")
+-- require("plugin-config.bufferline")
+
 -- require('plugin-config.autopairs')
 -- require("plugin-config.indent-blankline")
--- require("plugin-config.gitsigns")
 
 -- 内置LSP
 -- require("lsp.setup")

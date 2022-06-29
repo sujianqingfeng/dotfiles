@@ -10,7 +10,7 @@ lualine.setup({
     theme = "material-stealth",
     component_separators = { left = ">", right = "<" },
     -- https://github.com/ryanoasis/powerline-extra-symbols
-    section_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
   },
   extensions = { "nvim-tree", "toggleterm" },
   sections = {

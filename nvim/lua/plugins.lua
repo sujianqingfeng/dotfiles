@@ -33,25 +33,41 @@ end
 packer.startup({
   function(use)
     use 'wbthomason/packer.nvim'
+
     -- theme
     use "EdenEast/nightfox.nvim"
+
     -- nvim-tree
     use({ "kyazdani42/nvim-tree.lua", requires = "kyazdani42/nvim-web-devicons" })
+
     -- bufferline
-    use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
+    -- use({ "akinsho/bufferline.nvim", requires = { "kyazdani42/nvim-web-devicons", "moll/vim-bbye" }})
+
+    -- tabby
+    use "nanozuki/tabby.nvim"
+
     -- lualine
     use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons" } })
     use("arkav/lualine-lsp-progress")
+
+    --  feline
+    -- use 'feline-nvim/feline.nvim'
+
     -- telescope
     use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
+
     -- dashboard-nvim
     use("glepnir/dashboard-nvim")
+
     -- project
     use("ahmedkhalf/project.nvim")
+
     -- treesitter
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+
     -- lspconfig
     use({ "neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer" })
+
     -- 补全引擎
     use("hrsh7th/nvim-cmp")
     -- snippet 引擎
@@ -95,7 +111,7 @@ packer.startup({
     use "JoosepAlviste/nvim-ts-context-commentstring"
 
     -- git
-    -- use 'lewis6991/gitsigns.nvim'
+   -- use 'lewis6991/gitsigns.nvim'
 
     use "folke/which-key.nvim"
 
