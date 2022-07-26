@@ -16,7 +16,7 @@ require('plugin-config.comment')
 
 require('plugin-config.barbar')
 require('plugin-config.lualine')
-require('plugin-config.neoscroll')
+-- require('plugin-config.neoscroll')
 
 -- require("plugin-config.tabby")
 -- require("plugin-config.gitsigns")

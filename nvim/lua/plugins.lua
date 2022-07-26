@@ -127,7 +127,7 @@ packer.startup({
     use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
 
     --scroll
-    use 'karb94/neoscroll.nvim'
+    -- use 'karb94/neoscroll.nvim'
 
 
   end,
