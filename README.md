@@ -3,8 +3,9 @@
 ## ubuntu-setup
 
 ``` sh
-curl -fsSL https://rawgithubusercontent.deno.dev/sujianqingfeng/dotfiles/master/ubuntu_setup | bash
+sudo sh -c "$(curl -sSL https://rawgithubusercontent.deno.dev/sujianqingfeng/dotfiles/master/ubuntu_setup)"
 ```
+
 
 
 
