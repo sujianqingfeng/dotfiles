@@ -4,7 +4,7 @@ set -e
 
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y zsh 
+apt-get install -y zsh unzip
 snap install chezmoi --classic
 chezmoi init --apply https://gitlab.com/sujianqingfeng/dotfiles.git
 chsh -s /bin/zsh 
