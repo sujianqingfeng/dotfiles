@@ -1,8 +1,6 @@
 # Dotfiles
 
-## chezmoi
-
-### ubuntu
+## ubuntu-setup
 
 ``` sh
 curl -fsSL https://rawgithubusercontent.deno.dev/sujianqingfeng/dotfiles/master/ubuntu_setup | bash
