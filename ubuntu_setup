@@ -8,8 +8,13 @@ apt-get install -y zsh unzip
 snap install chezmoi --classic
 chezmoi init --apply https://gitlab.com/sujianqingfeng/dotfiles.git
 chsh -s /bin/zsh 
-curl -fsSL https://gitlab.com/hens/proxy/raw/main/fnm-install.sh | bash 
 chezmoi apply -v
+curl -fsSL https://gitlab.com/hens/proxy/raw/main/fnm-install.sh | bash 
 
 
-
+https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
+https://ghproxy.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
+https://hub.fastgit.org/Schniz/fnm/releases/latest/download/fnm-linux.zip
+https://github.com.cnpmjs.org/Schniz/fnm/releases/latest/download/fnm-linux.zip
+https://gh.api.99988866.xyz/Schniz/fnm/releases/latest/download/fnm-linux.zip
+https://gh.api.99988866.xyz/https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip
