@@ -7,6 +7,6 @@ apt-get upgrade -y
 apt-get install -y zsh unzip
 snap install chezmoi --classic
 chezmoi init --apply https://gitlab.com/sujianqingfeng/dotfiles.git
-chsh -s /bin/zsh 
 chezmoi apply -v
+chsh -s $(which zsh)
 curl -fsSL https://gitlab.com/hens/proxy/raw/main/fnm-install.sh | bash 
