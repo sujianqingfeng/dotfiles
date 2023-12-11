@@ -19,7 +19,6 @@ function global:which ([string]$command) {
 }
 
 
-
 # Alias
 
 # 删除冲突别名
@@ -55,7 +54,7 @@ function gA{
 }
 
 function gcam([string]$message) {
-  git add -A && git commit -m $message
+  git add -A ; git commit -m $message
 }
 
 function master {
@@ -98,5 +97,18 @@ function ngs{
 function ngc{
   npx nest g co $args
 }
+
+
+# proxy
+
+function proxy(){
+  netsh winhttp set proxy 127.0.0.1:7890
+}
+
+function unproxy(){
+  netsh winhttp reset proxy
+}
+
+# fnm
 
 fnm env --use-on-cd | Out-String | Invoke-Expression
