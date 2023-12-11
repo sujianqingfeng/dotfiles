@@ -2,15 +2,15 @@
 # Prompt
 # Import-Module oh-my-posh
 # Import-Module posh-git
-Import-Module Terminal-Icons
+Import-Module -Name Terminal-Icons
 # Install-Module PSReadLine
 
 oh-my-posh --init --shell pwsh --config ~/OneDrive/terminal-theme/wopian.omp.json | Invoke-Expression
 
 
 #PSREadLine
-Set-PSReadLineOption -EditMode Emacs
-Set-PSReadLineOption -PredictionSource History
+# Set-PSReadLineOption -EditMode Emacs
+# Set-PSReadLineOption -PredictionSource History
 
 # which
 function global:which ([string]$command) {
