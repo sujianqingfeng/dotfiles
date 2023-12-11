@@ -4,8 +4,7 @@ Description=kmonad keyboard config
 [Service]
 Restart=always
 RestartSec=3
-# 這裏要注意 這個路徑可能直接用root用戶可能發現不了這個路徑 可能需要全路徑
-ExecStart=/usr/bin/kmonad ~/.config/kmonad/config.kbd
+ExecStart=/home/hens/.bin/kmonad /home/hens/.config/kmonad/config.kbd
 Nice=-20
 
 [Install]

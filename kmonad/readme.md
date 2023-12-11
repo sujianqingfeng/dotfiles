@@ -3,5 +3,6 @@
 # 添加或修改配置文件后，需要重新加载
 systemctl daemon-reload
 
-# 设置自启动，实质就是在 /etc/systemd/system/multi-user.target.wants/ 添加服务文件的链接
-systemctl enable xxxxx
+# 设置自启动
+
+systemctl enable kmonad.service
