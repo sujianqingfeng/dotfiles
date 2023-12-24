@@ -109,6 +109,14 @@ function unproxy(){
   netsh winhttp reset proxy
 }
 
+function gproxy(){
+  git config http.proxy http://127.0.0.1:7890
+}
+
+function gunproxy(){
+  git config --unset http.proxy
+}
+
 # fnm
 
 fnm env --use-on-cd | Out-String | Invoke-Expression
