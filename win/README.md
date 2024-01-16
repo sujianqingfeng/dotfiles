@@ -1,10 +1,5 @@
-# 激活
-
-power shell
-
+# activate
 
 ```
 iwr -useb https://massgrave.dev/get | iex
 ```
-## location
-which $PROFILE

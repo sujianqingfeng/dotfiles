@@ -2,22 +2,21 @@
 # Prompt
 # Import-Module oh-my-posh
 # Import-Module posh-git
-Import-Module Terminal-Icons
+Import-Module -Name Terminal-Icons
 # Install-Module PSReadLine
 
 oh-my-posh --init --shell pwsh --config ~/OneDrive/terminal-theme/wopian.omp.json | Invoke-Expression
 
 
 #PSREadLine
-Set-PSReadLineOption -EditMode Emacs
-Set-PSReadLineOption -PredictionSource History
+# Set-PSReadLineOption -EditMode Emacs
+# Set-PSReadLineOption -PredictionSource History
 
 # which
 function global:which ([string]$command) {
   if (-not($command)) { throw "ERROR: Please supply a command name" }
   (Get-Command $command).Path
 }
-
 
 
 # Alias
@@ -55,7 +54,7 @@ function gA{
 }
 
 function gcam([string]$message) {
-  git add -A && git commit -m $message
+  git add -A ; git commit -m $message
 }
 
 function master {
@@ -98,5 +97,26 @@ function ngs{
 function ngc{
   npx nest g co $args
 }
+
+
+# proxy
+
+function proxy(){
+  netsh winhttp set proxy 127.0.0.1:7890
+}
+
+function unproxy(){
+  netsh winhttp reset proxy
+}
+
+function gproxy(){
+  git config http.proxy http://127.0.0.1:7890
+}
+
+function gunproxy(){
+  git config --unset http.proxy
+}
+
+# fnm
 
 fnm env --use-on-cd | Out-String | Invoke-Expression

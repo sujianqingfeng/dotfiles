@@ -1,8 +1,8 @@
 (defcfg
   ;; 內置的鍵盤
-  ;;input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+  input  (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
   ;; 無線
-  input  (device-file "/dev/input/event16")
+  ;;input  (device-file "/dev/input/event16")
   output (uinput-sink "Kmonad kbd"))
 
 (defsrc
@@ -46,3 +46,4 @@
   my (layer-toggle my)
   sym (layer-toggle syms)
 )
+
