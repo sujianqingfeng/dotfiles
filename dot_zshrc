@@ -2,6 +2,7 @@ source "$HOME/.zsh/exec.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/fnm.zsh"
 source "$HOME/.zsh/proxy.zsh"
+source "$HOME/.zsh/wsl_proxy.zsh"
 # source "$HOME/.zsh/kmonad.zsh"
 
 
@@ -111,4 +112,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 
