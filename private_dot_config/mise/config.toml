@@ -1,0 +1,19 @@
+[settings]
+idiomatic_version_file_enable_tools = ["node", "python"]
+
+[tools]
+bun = "1.3.14"
+java = "temurin-17.0.20+8"
+node = "22.22.0"
+opencode = "1.15.13"
+pnpm = "10.33.0"
+python = "3.14.5"
+rust = "1.96.1"
+uv = "0.9.17"
+"npm:@antfu/ni" = { version = "30.5.0", depends = ["node"] }
+"npm:@earendil-works/pi-coding-agent" = { version = "0.83.0", depends = ["node"] }
+"npm:@google/gemini-cli" = { version = "0.38.1", depends = ["node"] }
+"npm:@larksuite/cli" = { version = "1.0.58", depends = ["node"] }
+"npm:@openai/codex" = { version = "0.147.0", depends = ["node"] }
+"npm:@tencent-qqmail/agently-cli" = { version = "1.0.15", depends = ["node"] }
+"npm:chrome-devtools-mcp" = { version = "0.25.0", depends = ["node"] }

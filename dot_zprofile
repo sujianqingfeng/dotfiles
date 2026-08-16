@@ -1,0 +1,18 @@
+# Initialize Homebrew on both Apple Silicon and Intel Macs.
+for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+  if [ -x "$brew_bin" ]; then
+    eval "$("$brew_bin" shellenv)"
+    break
+  fi
+done
+unset brew_bin
+
+# Shims prevent missing project versions from falling through to Homebrew.
+if [ -d "$HOME/.local/share/mise/shims" ]; then
+  export PATH="$HOME/.local/share/mise/shims:$PATH"
+fi
+
+# OrbStack adds its CLI integration here when installed.
+if [ -r "$HOME/.orbstack/shell/init.zsh" ]; then
+  source "$HOME/.orbstack/shell/init.zsh"
+fi
