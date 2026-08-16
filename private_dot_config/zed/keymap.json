@@ -1,0 +1,97 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+
+[
+  {
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-h": "pane::ActivatePreviousItem",
+      "alt-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "z a": "editor::Fold",
+      "z o": "editor::UnfoldLines",
+      "H": "vim::FirstNonWhitespace",
+      "L": "vim::EndOfLine",
+      "space r n": "editor::Rename",
+      "space .": "editor::ToggleCodeActions",
+      "space b": "git::Blame",
+      "space e": "workspace::ToggleLeftDock",
+      "space o e": "workspace::ToggleLeftDock",
+      "space o f": "project_search::ToggleFocus",
+      "space o g": "git_panel::ToggleFocus",
+      "space g o": "outline::Toggle",
+      "space g O": "outline::Toggle",
+      "space z": "workspace::ToggleZoom",
+      "space s r": "pane::SplitRight",
+      "space s l": "pane::SplitLeft",
+      "=": "editor::Format"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == operator && !menu",
+    "bindings": {
+      "H": "vim::FirstNonWhitespace",
+      "L": "vim::EndOfLine"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == visual || vim_mode == visual_line || vim_mode == visual_block) && !menu",
+    "bindings": {
+      "H": "vim::FirstNonWhitespace",
+      "L": "vim::EndOfLine"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "A": "project_panel::NewDirectory"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-s": "workspace::SaveAll",
+      "cmd-\\": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "menu",
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious"
+    }
+  }
+]

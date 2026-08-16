@@ -1,5 +1,4 @@
 README.md
-ubuntu_setup
-
-win/**
-kmonad/**
+.editorconfig
+.gitignore
+scripts/**

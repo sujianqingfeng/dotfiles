@@ -1,10 +1,8 @@
 # fnm
-if [[ "$(uname)" == "Darwin" ]]; then
-  export PATH="/Users/hens/Library/Application Support/fnm:$PATH"
-elif [[ "$(expr substr $(uname -s) 1 5)" == "Linux" ]]; then
-  export PATH="$HOME/.local/share/fnm:$PATH"
-  export PATH="/root/.local/share/fnm:$PATH"
-else
+if [ -d "$HOME/Library/Application Support/fnm" ]; then
+  export PATH="$HOME/Library/Application Support/fnm:$PATH"
 fi
 
-eval "`fnm env`"
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --shell zsh)"
+fi

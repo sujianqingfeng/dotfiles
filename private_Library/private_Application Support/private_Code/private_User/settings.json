@@ -1,0 +1,255 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.accessibilitySupport": "off",
+  "editor.autoClosingBrackets": "beforeWhitespace",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line",
+  "editor.detectIndentation": false,
+  "editor.foldingMaximumRegions": 50000,
+  "editor.fontFamily": "Dank Mono,Maple Mono NF,Fira Code",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 13,
+  "editor.fontWeight": 400,
+  "editor.formatOnSave": false,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.lineHeight": 16,
+  "editor.lineNumbers": "relative",
+  "editor.maxTokenizationLineLength": 100000,
+  "editor.minimap.enabled": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.suggest.insertMode": "replace",
+  "editor.suggest.matchOnWordStartOnly": false,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.factorypath": true,
+    "**/.project": true,
+    "**/.settings": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  // "git.mergeEditor": true,
+  "github.copilot.enable": {
+    "*": true
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "security.workspace.trust.untrustedFiles": "open",
+  "settingsSync.ignoredSettings": [
+    "vim.autoSwitchInputMethod.switchIMCmd",
+    "vim.autoSwitchInputMethod.obtainIMCmd",
+    "vim.autoSwitchInputMethod.defaultIM",
+    "http.proxy"
+  ],
+  "terminal.integrated.fontFamily": "Dank Mono,Maple Mono NF,Fira Code",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.3,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.autoSwitchInputMethod.enable": true,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.ABC",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/opt/homebrew/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/opt/homebrew/bin/im-select {im}",
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  },
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "after": ["<Esc>"],
+      "before": ["j", "j"]
+    },
+    {
+      "after": ["<Esc>", "H", "i"],
+      "before": ["<C-h>"]
+    },
+    {
+      "after": ["<Esc>", "A"],
+      "before": ["<C-l>"]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.flash.enable": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["leader", "s", "w"],
+      "commands": ["workbench.action.quickSwitchWindow"]
+    },
+    {
+      "before": ["leader", "o", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["leader", "o", "f"],
+      "commands": ["workbench.view.search"]
+    },
+    {
+      "before": ["<leader>", "o", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["<space>", "d", "f"],
+      "commands": ["delete-function.deleteFunction"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "after": ["^"],
+      "before": ["H"]
+    },
+    {
+      "after": ["$"],
+      "before": ["L"]
+    },
+    {
+      "before": ["<leader>", "."],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["extension.toggleBool"]
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": [":wq"]
+    },
+    {
+      "before": ["<leader>", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "g", "O"],
+      "commands": ["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["<leader>", "g", "o"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    {
+      "before": ["<leader>", "s", "r"],
+      "commands": ["workbench.action.splitEditorToRightGroup"]
+    },
+    {
+      "before": ["<leader>", "s", "l"],
+      "commands": ["workbench.action.splitEditorToLeftGroup"]
+    },
+    {
+      "before": ["="],
+      "commands": ["editor.action.formatDocument.multiple"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "t", "w"],
+      "commands": ["workbench.action.toggleEditorWidths"]
+    },
+    {
+      "before": ["<leader>", "s", "w"],
+      "commands": ["workbench.action.toggleEditorWidths"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["gitlens.toggleFileBlame"]
+    }
+  ],
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "after": ["$"],
+      "before": ["L"]
+    },
+    {
+      "after": ["^"],
+      "before": ["H"]
+    }
+  ],
+  "vim.showMarksInGutter": true,
+  "vim.sneak": true,
+  "vim.sneakReplacesF": true,
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    },
+    {
+      "before": ["<leader>", "."],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["editor.action.formatSelection"]
+    }
+  ],
+  // To improve performance
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "window.commandCenter": false,
+  "window.newWindowDimensions": "inherit",
+  "workbench.startupEditor": "none",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.linkedEditing": true,
+  "workbench.editor.empty.hint": "hidden",
+  "http.proxyStrictSSL": false,
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.activityBar.location": "bottom",
+  "explorer.confirmPasteNative": false,
+  "workbench.editor.showTabs": "none",
+  "window.zoomLevel": 1,
+  "breadcrumbs.enabled": false,
+  "window.customTitleBarVisibility": "auto",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "custom-ui-style.font.sansSerif": "Dank Mono",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "amp.url": "https://ampcode.com/",
+  "editor.wordBasedSuggestions": "off",
+  "amp.tab.enabled": true,
+  "workbench.colorTheme": "Vitesse Dark",
+  "kilo-code.debug": false,
+  "kilo-code.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "kilo-code.deniedCommands": [],
+}

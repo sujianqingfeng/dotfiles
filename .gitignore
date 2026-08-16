@@ -1,0 +1,17 @@
+.DS_Store
+*.log
+
+# Credentials and machine-local state must never enter this public repository.
+**/.codex.env
+**/.env.codex
+**/hosts.yml
+**/age-identity.txt
+**/secrets/**
+**/*cookie*
+**/session.json
+
+# Generated application state
+**/automatic_backups/**
+**/backups/**
+**/conversations/**
+**/node_modules/**

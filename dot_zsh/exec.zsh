@@ -10,9 +10,3 @@ fi
 if [ -d "$HOME/.bin" ] ; then
     PATH="$HOME/.bin:$PATH"
 fi
-
-
-# 其他可执行目录
-if [ -d "/snap/bin" ] ; then
-    PATH="/snap/bin:$PATH"
-fi
