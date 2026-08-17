@@ -38,3 +38,33 @@ i() {
 
 alias c='code .'
 alias mv='mv -i'
+
+# Claude Code via Zhipu GLM. Keep the token in macOS Keychain instead of Git.
+cc-glm-set-token() {
+  security add-generic-password \
+    -U \
+    -a "$USER" \
+    -s "cc-glm-anthropic-token" \
+    -w
+}
+
+cc-glm() {
+  local auth_token
+
+  if ! auth_token="$(security find-generic-password \
+    -a "$USER" \
+    -s "cc-glm-anthropic-token" \
+    -w 2>/dev/null)"; then
+    print -u2 "cc-glm: token not found; run cc-glm-set-token first"
+    return 1
+  fi
+
+  env \
+    ANTHROPIC_BASE_URL="https://open.bigmodel.cn/api/anthropic" \
+    ANTHROPIC_AUTH_TOKEN="$auth_token" \
+    CLAUDE_CODE_AUTO_COMPACT_WINDOW="1000000" \
+    ANTHROPIC_DEFAULT_HAIKU_MODEL="glm-4.7" \
+    ANTHROPIC_DEFAULT_SONNET_MODEL="glm-5.3[1m]" \
+    ANTHROPIC_DEFAULT_OPUS_MODEL="glm-5.3[1m]" \
+    claude --dangerously-skip-permissions "$@"
+}
