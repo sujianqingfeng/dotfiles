@@ -97,40 +97,24 @@ _codex_project_env_apply() {
   fi
 }
 
-# Per-profile model config: profile_name -> "model_provider model [reasoning_effort]"
-typeset -gA _codex_profile_configs=(
-  wxb   "wxb gpt-5.6-sol xhigh"
-  ai    "ai gpt-5.6-sol xhigh"
-  tuzi  "tuzi gpt-5.6-sol xhigh"
-  free  "free gpt-5.6-sol xhigh"
-)
-
-_codex_has_config_flag() {
+# Wrapper: load the matching ~/.codex/<profile>.config.toml when a project
+# profile is set. Explicit --profile/-p arguments always win.
+_codex_has_profile_flag() {
   local _codex_arg
   for _codex_arg in "$@"; do
     case "$_codex_arg" in
-      -c|--config) return 0 ;;
+      -p|--profile|--profile=*) return 0 ;;
     esac
   done
   return 1
 }
 
-# Wrapper: inject -c model_provider=... when CODEX_PROJECT_PROFILE is set
 codex() {
   local -a _codex_extra_args=()
 
-  if [[ -n "${CODEX_PROJECT_PROFILE:-}" && -n "${_codex_profile_configs[$CODEX_PROJECT_PROFILE]:-}" ]]; then
-    local _codex_profile_spec="${_codex_profile_configs[$CODEX_PROJECT_PROFILE]}"
-    local _codex_provider="${_codex_profile_spec[(w)1]}"
-    local _codex_model="${_codex_profile_spec[(w)2]}"
-    local _codex_effort="${_codex_profile_spec[(w)3]}"
-
-    # Only inject if user didn't already pass -c model_provider=...
-    if ! _codex_has_config_flag "$@"; then
-      _codex_extra_args+=(-c "model_provider=$_codex_provider")
-      [[ -n "$_codex_model" ]] && _codex_extra_args+=(-c "model=$_codex_model")
-      [[ -n "$_codex_effort" ]] && _codex_extra_args+=(-c "model_reasoning_effort=$_codex_effort")
-    fi
+  if [[ -n "${CODEX_PROJECT_PROFILE:-}" ]] &&
+     ! _codex_has_profile_flag "$@"; then
+    _codex_extra_args+=(--profile "$CODEX_PROJECT_PROFILE")
   fi
 
   command codex "${_codex_extra_args[@]}" "$@"
